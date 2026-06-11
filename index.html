@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ouvidoria BH</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #sidebar {
+      width: 250px;
+      padding: 10px;
+      overflow-y: auto;
+      background: #f4f4f4;
+    }
+
+    #map {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="sidebar">
+    <h3>Ouvidoria BH</h3>
+    <label>Filtrar por status:</label>
+    <select id="filtro" onchange="renderizar()">
+      <option value="Todos">Todos</option>
+      <option value="Aberto">Aberto</option>
+      <option value="Em andamento">Em andamento</option>
+      <option value="Concluído">Concluído</option>
+    </select>
+    <hr>
+    <div id="lista"></div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+  
+</body>
+
+</html>
