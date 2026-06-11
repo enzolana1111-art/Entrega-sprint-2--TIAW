@@ -1,0 +1,125 @@
+
+{
+  "denuncias": [
+    {
+      "id": 1,
+      "titulo": "Buraco na rua",
+      "bairro": "Savassi",
+      "status": "Aberto",
+      "lat": -19.939,
+      "lng": -43.935
+    },
+    {
+      "id": 2,
+      "titulo": "Lixo acumulado",
+      "bairro": "Jardim América",
+      "status": "Em andamento",
+      "lat": -19.951,
+      "lng": -43.972
+    },
+    {
+      "id": 3,
+      "titulo": "Poste apagado",
+      "bairro": "Pampulha",
+      "status": "Concluído",
+      "lat": -19.865,
+      "lng": -43.96
+    },
+    {
+      "id": 4,
+      "titulo": "Calçada quebrada",
+      "bairro": "Sion",
+      "status": "Aberto",
+      "lat": -19.958,
+      "lng": -43.936
+    },
+    {
+      "id": 5,
+      "titulo": "Esgoto vazando",
+      "bairro": "Lourdes",
+      "status": "Em andamento",
+      "lat": -19.93,
+      "lng": -43.942
+    },
+    {
+      "id": 6,
+      "titulo": "Semáforo com defeito",
+      "bairro": "Savassi",
+      "status": "Concluído",
+      "lat": -19.9345,
+      "lng": -43.9352
+    },
+    {
+      "id": 7,
+      "titulo": "Árvore com risco de queda",
+      "bairro": "Buritis",
+      "status": "Concluído",
+      "lat": -19.975,
+      "lng": -43.965
+    },
+    {
+      "id": 8,
+      "titulo": "Desgaste no asfalto",
+      "bairro": "Santa Cruz",
+      "status": "Em andamento",
+      "lat": -19.88,
+      "lng": -43.945
+    },
+    {
+      "id": 9,
+      "titulo": "Fio exposto",
+      "bairro": "Sion",
+      "status": "Aberto",
+      "lat": -19.95,
+      "lng": -43.935
+    },
+    {
+      "id": 10,
+      "titulo": "Falta de energia",
+      "bairro": "Lagoinha",
+      "status": "Em andamento",
+      "lat": -19.908,
+      "lng": -43.944
+    },
+    {
+      "id": 11,
+      "titulo": "Música alta de noite",
+      "bairro": "Nova Granada",
+      "status": "Aberto",
+      "lat": -19.945,
+      "lng": -43.964
+    },
+    {
+      "id": 12,
+      "titulo": "Poucas viaturas",
+      "bairro": "São Lucas",
+      "status": "Em andamento",
+      "lat": -19.925,
+      "lng": -43.925
+    },
+    {
+      "id": 13,
+      "titulo": "Placa derrubada",
+      "bairro": "Horto",
+      "status": "Em andamento",
+      "lat": -19.91,
+      "lng": -43.913
+    },
+    {
+      "id": 14,
+      "titulo": "Queda de muro",
+      "bairro": "Sion",
+      "status": "Aberto",
+      "lat": -19.957,
+      "lng": -43.927
+    },
+    {
+      "id": 15,
+      "titulo": "Rua alagada",
+      "bairro": "São Lucas",
+      "status": "Em andamento",
+      "lat": -19.93,
+      "lng": -43.924
+    }
+  ]
+}
