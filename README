@@ -1,0 +1,74 @@
+Ouvidoria BH — Mapa de Denúncias Urbanas
+
+Aplicação web que exibe, em um mapa interativo de Belo Horizonte, denúncias urbanas (buracos, lixo acumulado, iluminação, etc.) reportadas por bairro. Os dados são consumidos de uma API REST local e visualizados com marcadores individuais e um mapa de calor (heatmap), permitindo identificar rapidamente as regiões com maior concentração de ocorrências.
+
+Funcionalidades
+Mapa interativo centrado em Belo Horizonte, usando Leaflet.js com tiles do OpenStreetMap.
+Marcadores por denúncia, com popup exibindo título, bairro e status.
+Mapa de calor (heatmap) gerado com o plugin Leaflet.heat, destacando áreas com mais denúncias.
+Filtro por status (Todos, Aberto, Em andamento, Concluído), atualizando o mapa e a lista lateral em tempo real.
+Lista lateral com as denúncias filtradas, sincronizada com o mapa.
+Tecnologias utilizadas
+Camada	Tecnologia
+Front-end	HTML, CSS, JavaScript (vanilla)
+Mapa	Leaflet.js + Leaflet.heat
+Tiles	OpenStreetMap
+API / Back-end mock	json-server
+Dados	Arquivo db.json (mock de banco de dados)
+Estrutura do projeto
+├── index.html      # Estrutura da página (mapa + sidebar de filtros)
+├── script.js        # Lógica do mapa, consumo da API e renderização
+├── db.json           # Base de dados mockada (denúncias)
+├── package.json    # Dependências e scripts do projeto
+Como a API funciona
+
+O projeto utiliza o json-server para simular uma API REST a partir do arquivo db.json. Cada denúncia possui a seguinte estrutura:
+
+json
+{
+  "id": 1,
+  "titulo": "Buraco na rua",
+  "bairro": "Savassi",
+  "status": "Aberto",
+  "lat": -19.939,
+  "lng": -43.935
+}
+
+Ao rodar o servidor, o json-server expõe automaticamente o endpoint:
+
+GET http://localhost:3000/denuncias
+
+que retorna todas as denúncias cadastradas em db.json. O front-end (script.js) consome esse endpoint via fetch, filtra os resultados conforme o status selecionado e renderiza os marcadores e o heatmap no mapa.
+
+Como executar o projeto
+Pré-requisitos
+Node.js instalado (necessário para rodar o json-server).
+Passo a passo
+Clone o repositório:
+bash
+   git clone <url-do-repositorio>
+   cd Entrega-sprint-2--TIAW-main
+Instale as dependências:
+bash
+   npm install
+Inicie a API (json-server):
+bash
+   npm start
+
+Isso irá subir a API em http://localhost:3000, observando o arquivo db.json.
+
+Abra o arquivo index.html no navegador (pode usar a extensão Live Server do VS Code ou simplesmente abrir o arquivo diretamente).
+
+⚠️ É necessário que a API (npm start) esteja rodando antes de abrir a página, pois o mapa depende do endpoint http://localhost:3000/denuncias para carregar os dados.
+
+Como adicionar novas denúncias
+
+Basta editar o arquivo db.json e adicionar um novo objeto ao array denuncias, seguindo o mesmo padrão (id único, título, bairro, status e coordenadas lat/lng). Como o json-server observa o arquivo (--watch), as mudanças são refletidas automaticamente na API.
+
+Formulário para cadastro de novas denúncias diretamente pela interface (POST para a API).
+Autenticação de usuários/administradores.
+Deploy da API em um servidor real (ao invés do json-server local).
+Busca por bairro ou palavra-chave.
+Autor : Enzo Rodrigues Lana de Souza Lima
+
+Projeto desenvolvido como parte da disciplina TIAW.
